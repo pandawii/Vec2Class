@@ -1,4 +1,3 @@
-
 #include"vec2.h"
 
 
@@ -7,16 +6,26 @@ Vector2::Vector2(float p_x, float p_y)
 	, y(p_y)
 {}
 
-Vector2 Vector2::operator + (const Vector2 & rightHandSide) const
+Vector2 Vector2::operator + (const Vector2 & other) const
 {
-	return Vector2(x+rightHandSide.x,y+rightHandSide.y);
+	return Vector2(x+ other.x,y+ other.y);
 }
 
-void Vector2::operator += (const Vector2& rightHandSide)
+
+
+void Vector2::operator += (const Vector2& other)
 {
-	x += rightHandSide.x;
-	y += rightHandSide.y;
+	x += other.x;
+	y += other.y;
 }
+
+std::ostream& operator<<(std::ostream& stream, const Vector2& other)
+{
+	stream << other.x << " " << other.y;
+	return stream;
+}
+
+
 
 void Vector2::add(const Vector2& v)
 {
@@ -24,11 +33,17 @@ void Vector2::add(const Vector2& v)
 	y += v.y;
 }
 
+
 Vector2& Vector2::scale(float S)
 {
 	x *= S;
 	y *= S;
 	return *this;
+}
+
+float Vector2::dist(const Vector2& v) const
+{
+	return sqrtf((v.x-x)*(v.x-x)+(v.y-y)*(v.y-y));     
 }
 
 
