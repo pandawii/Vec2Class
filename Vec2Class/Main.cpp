@@ -10,5 +10,5 @@ int main(int argc,char* argv[])
 	v1.add(v2);
 	v1.scale(2);
 
-	std::cout << v1.x<<" "<<v1.y<<std::endl;
+	std::cout << v1.x<<"ss "<<v1.y<<std::endl;
 }
