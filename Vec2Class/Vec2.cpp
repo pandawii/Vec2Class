@@ -13,6 +13,11 @@ Vector2 Vector2::operator + (const Vector2 & other) const
 	return Vector2(x+ other.x,y+ other.y);
 }
 
+Vector2 Vector2::operator-(const Vector2& other) const
+{
+	return Vector2(x - other.x, y - other.y);
+}
+
 
 
 void Vector2::operator += (const Vector2& other)
@@ -53,6 +58,21 @@ void Vector2::normalize()
 	x = x / magnitude;
 	y = y / magnitude;
 }
+
+Vector2& Vector2::normalized()
+{
+	x = x / magnitude;
+	y = y / magnitude;
+	return *this;
+}
+
+
+Vector2 Vector2::Dir(Vector2& v1, Vector2& v2)
+{
+	return v2-v1;
+}
+
+
 
 
 

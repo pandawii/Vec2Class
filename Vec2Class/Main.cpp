@@ -9,8 +9,8 @@ int main(int argc,char* argv[])
 
 	
 	std::cout << "magnitude of v1 = " << v1.magnitude << std::endl;
-	v1.normalize();
-	std::cout << "magnitude of v1 = " << v1 << std::endl;
+	
+	std::cout << "Dir of v1 to v2 = " << Vector2::Dir(v1,v2).normalized() << std::endl;
 
 
 }
