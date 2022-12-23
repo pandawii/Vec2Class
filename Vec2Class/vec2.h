@@ -4,10 +4,13 @@
 
 class Vector2
 {
+private:
+
 public:
 	float x = 0;
 	float y = 0;
 	float magnitude = 0;
+	static constexpr float radians = 57.29578f;
 
 	Vector2() {} // defualt constructer
 	Vector2(float p_x, float p_y);   // p is referring to parameter
@@ -21,8 +24,10 @@ public:
 	float dist(const Vector2& v)const;
 	void normalize();
 	Vector2& normalized();
+	float angle(Vector2& v2);
 	static Vector2 Dir(Vector2& v1, Vector2& v2);
 	static float Distance(Vector2& v1, Vector2& v2);
+	static float angle(Vector2& v1, Vector2& v2);
 
 };
 

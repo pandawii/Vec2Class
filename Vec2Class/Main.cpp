@@ -9,7 +9,7 @@ int main(int argc,char* argv[])
 
 	
 	
-	std::cout << "Distance of v1 to v2 = " << Vector2::Distance(v1,v2) << std::endl;
+	std::cout << "angle of v1 to v2 = " << v1.angle(v2) << std::endl;
 
 
 }

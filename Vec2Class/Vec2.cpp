@@ -67,6 +67,8 @@ Vector2& Vector2::normalized()
 }
 
 
+
+
 Vector2 Vector2::Dir(Vector2& v1, Vector2& v2)
 {
 	return v2-v1;
@@ -75,6 +77,19 @@ Vector2 Vector2::Dir(Vector2& v1, Vector2& v2)
 float Vector2::Distance(Vector2& v1, Vector2& v2)
 {	
 	return (v2-v1).magnitude;
+}
+
+float Vector2::angle(Vector2& v2)
+{
+	auto v3 = v2 - *this;
+	return atan2f(v3.y, v3.x)*radians;
+	return 0.0f;
+}
+
+float Vector2::angle(Vector2& v1, Vector2& v2)
+{
+	auto v3 = v2 - v1;
+	return atan2f(v3.y,v3.x)*radians;
 }
 
 
