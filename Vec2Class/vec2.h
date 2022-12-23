@@ -22,6 +22,7 @@ public:
 	void normalize();
 	Vector2& normalized();
 	static Vector2 Dir(Vector2& v1, Vector2& v2);
+	static float Distance(Vector2& v1, Vector2& v2);
 
 };
 

@@ -5,7 +5,7 @@ Vector2::Vector2(float p_x, float p_y)
 	:x(p_x)
 	, y(p_y)
 {
-	magnitude = sqrt((x * x) + (y * y));
+	magnitude = sqrtf((x * x) + (y * y));
 }
 
 Vector2 Vector2::operator + (const Vector2 & other) const
@@ -72,6 +72,10 @@ Vector2 Vector2::Dir(Vector2& v1, Vector2& v2)
 	return v2-v1;
 }
 
+float Vector2::Distance(Vector2& v1, Vector2& v2)
+{	
+	return (v2-v1).magnitude;
+}
 
 
 

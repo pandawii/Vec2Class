@@ -8,9 +8,8 @@ int main(int argc,char* argv[])
 	Vector2 v2(50, 75);
 
 	
-	std::cout << "magnitude of v1 = " << v1.magnitude << std::endl;
 	
-	std::cout << "Dir of v1 to v2 = " << Vector2::Dir(v1,v2).normalized() << std::endl;
+	std::cout << "Distance of v1 to v2 = " << Vector2::Distance(v1,v2) << std::endl;
 
 
 }
