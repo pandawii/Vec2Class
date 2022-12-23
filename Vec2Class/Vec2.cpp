@@ -4,7 +4,9 @@
 Vector2::Vector2(float p_x, float p_y)
 	:x(p_x)
 	, y(p_y)
-{}
+{
+	magnitude = sqrt((x * x) + (y * y));
+}
 
 Vector2 Vector2::operator + (const Vector2 & other) const
 {
@@ -21,7 +23,7 @@ void Vector2::operator += (const Vector2& other)
 
 std::ostream& operator<<(std::ostream& stream, const Vector2& other)
 {
-	stream << other.x << " " << other.y;
+	stream << other.x << " , " << other.y;
 	return stream;
 }
 
@@ -44,6 +46,12 @@ Vector2& Vector2::scale(float S)
 float Vector2::dist(const Vector2& v) const
 {
 	return sqrtf((v.x-x)*(v.x-x)+(v.y-y)*(v.y-y));     
+}
+
+void Vector2::normalize()
+{
+	x = x / magnitude;
+	y = y / magnitude;
 }
 
 

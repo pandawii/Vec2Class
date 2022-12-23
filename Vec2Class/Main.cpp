@@ -4,11 +4,13 @@
 
 int main(int argc,char* argv[])
 {
-	Vector2 v1(100, 200);
+	Vector2 v1(4, -9);
 	Vector2 v2(50, 75);
 
 	
+	std::cout << "magnitude of v1 = " << v1.magnitude << std::endl;
+	v1.normalize();
+	std::cout << "magnitude of v1 = " << v1 << std::endl;
 
-	std::cout <<v1+v2;;
 
 }
