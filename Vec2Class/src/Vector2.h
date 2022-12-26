@@ -1,3 +1,6 @@
+#pragma once
+
+
 #pragma once //to prevent duplicates
 #include<math.h>
 #include<iostream>
@@ -12,8 +15,8 @@ public:
 	float x = 0;
 	float y = 0;
 
-	Vector2() {} 
-	Vector2(float p_x, float p_y);   
+	Vector2() {}
+	Vector2(float p_x, float p_y);
 
 	static float Distance(Vector2& v1, Vector2& v2);
 	static float angle(Vector2& v1, Vector2& v2);
@@ -21,7 +24,7 @@ public:
 	static Vector2 Dir(Vector2& v1, Vector2& v2);
 
 	friend std::ostream& operator<<(std::ostream& stream, const Vector2& other);
-	 
+
 	bool operator ==(const Vector2& other) const;
 	bool operator !=(const Vector2& other)const;
 
@@ -38,12 +41,12 @@ public:
 	Vector2& scale(float scaler);
 	Vector2& normalized();
 
-	void add (const Vector2& other);
+	void add(const Vector2& other);
 	void normalize();
 
 	float getLength()const;
 
-	
+
 
 };
 

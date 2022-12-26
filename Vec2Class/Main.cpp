@@ -9,7 +9,7 @@ int main(int argc,char* argv[])
 
 	
 	
-	std::cout << "angle of v1 to v2 = " << v1.angle(v2) << std::endl;
+	
 
 
 }
