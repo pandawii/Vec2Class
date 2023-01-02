@@ -1,4 +1,6 @@
+
 #pragma once //to prevent duplicates
+
 #include<math.h>
 #include<iostream>
 
